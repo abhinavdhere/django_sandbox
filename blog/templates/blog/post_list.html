@@ -1,0 +1,21 @@
+<html>
+
+<head>
+	<title>Abhinav's Blog</title>
+</head>
+
+<body bgcolor='aqua'>
+<div>
+	<h1> Abhinav's blog </h1>
+</div>
+
+{% for post in posts %}
+<div>
+	<h1><a href="">{{ post.title }}</a></h1>
+	<p>Published: {{ post.published_date }}</p>
+	<p>{{ post.text|linebreaksbr }}</p>
+</div>
+{% endfor %}
+</body>
+
+</html>
