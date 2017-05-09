@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title> Login </title>
+	</head>
+	<body>
+		{% if form.errors %}
+		<p class=error> Username or Password invalid </p>
+		{% endif %}
+		
+		{% block logout %}
+		{% endblock %}
+
+		{% block reg_success %}
+		{% endblock %}
+		
+		<h1> Login to website </h1>
+		<form action = "/users/auth/" method = "post"> {% csrf_token %}
+			<label> Username: </label>
+			<input type = "text" name = "username"> <br>
+			<label> Password: </label>
+			<input type = "password" name = "password"> <br>
+			<input type = "submit"> 
+		</form>
+	</body>
+</html>
